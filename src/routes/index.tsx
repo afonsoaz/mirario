@@ -261,10 +261,7 @@ function Index() {
         </section>
 
         <section className="azulejo-band py-20 md:py-28">
-          <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
-            <p className="text-xs font-semibold uppercase text-accent">De geração em geração</p>
-          </div>
-          <figure className="mt-10 w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]">
+          <figure className="w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]">
             <img
               src={rioAve.url}
               alt="Vista do Rio Ave a partir do Restaurante Mira Rio, em Rebordões, Santo Tirso"
@@ -273,6 +270,9 @@ function Index() {
             />
           </figure>
           <div className="mx-auto mt-14 max-w-3xl px-5 text-center md:px-8">
+            <p className="text-xs font-semibold uppercase text-accent">De geração em geração</p>
+          </div>
+          <div className="mx-auto mt-10 max-w-3xl px-5 text-center md:px-8">
             <h2 className="font-display text-4xl leading-tight text-primary md:text-6xl">
               Uma casa onde a qualidade se prova primeiro à mesa da família.
             </h2>

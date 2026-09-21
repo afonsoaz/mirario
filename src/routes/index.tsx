@@ -263,11 +263,11 @@ function Index() {
           <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
             <p className="text-xs font-semibold uppercase text-accent">De geração em geração</p>
           </div>
-          <figure className="mt-10 w-screen md:w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]">
+          <figure className="mt-10 w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]">
             <img
               src={rioAve.url}
               alt="Vista do Rio Ave a partir do Restaurante Mira Rio, em Rebordões, Santo Tirso"
-              className="h-[60vh] w-full object-cover md:h-[80vh]"
+              className="h-[85vh] w-full object-cover md:h-screen"
               loading="lazy"
             />
           </figure>

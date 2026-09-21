@@ -210,12 +210,12 @@
 
 @utility fernanda-hero-mobile {
   position: absolute;
-  top: 0;
+  top: -0.5rem;
   right: 0;
-  width: 48%;
-  height: 42vh;
-  min-height: 300px;
-  max-height: 400px;
+  width: 46%;
+  height: 40vh;
+  min-height: 260px;
+  max-height: 360px;
   z-index: 0;
   display: flex;
   justify-content: flex-end;
@@ -227,7 +227,7 @@
     object-fit: contain;
     object-position: top right;
     filter: contrast(0.9);
-    opacity: 0.9;
+    opacity: 0.92;
   }
 }
 

@@ -130,10 +130,11 @@ function Index() {
             </h1>
             <div className="relative">
               <p className="mt-8 max-w-lg text-lg leading-8 text-foreground md:text-muted-foreground">
-                No Mira Rio, cozinha-se como em casa. D. Fernanda prepara cada refeição com o mesmo cuidado com que alimenta os filhos e os netos, que continuam a sentar-se aqui à mesa quase todos os dias.
+                No Restaurante Mira Rio, cozinha-se como em casa.
+                D. Fernanda prepara cada refeição com o mesmo cuidado com que alimenta os filhos e os netos, que continuam a sentar-se aqui à mesa quase todos os dias.
               </p>
               <p className="mt-6 max-w-lg border-l-2 border-accent pl-5 font-display text-2xl italic leading-snug text-foreground">
-                “Se é bom para a minha família, é bom para quem nos visita.”
+                “Dou aos meus clientes aquilo que dou aos meus filhos.”
               </p>
               <a className="hero-phone mt-7" href="tel:+351252853492" aria-label="Ligar para o Restaurante Mira Rio">
                 <span>Reservas e prato do dia</span>

@@ -59,19 +59,19 @@ const highlights = [
 
 const reviews = [
   {
+    quote: "Experimentei o bacalhau à Mira Rio e estava delicioso. Os funcionários são muito simpáticos e profissionais. Recomendo!",
+    author: "Carlos",
+    source: "Google",
+  },
+  {
+    quote: "Comida deliciosa e com sabor caseiro. Ambiente perfeito para almoços em família e encontros entre amigos.",
+    author: "CCPEACEADEA",
+    source: "Tripadvisor",
+  },
+  {
     quote: "Bom ambiente familiar, comida caseira. Em especial a vitela assada e os rojões. A D. Fernanda cozinha muito bem.",
     author: "L. C.",
-    source: "Google",
-  },
-  {
-    quote: "Não há filetes como os do restaurante Mira Rio.",
-    author: "C. C.",
-    source: "Google",
-  },
-  {
-    quote: "Comida caseira e de qualidade. Restaurante com ambiente familiar. Uma opção que nunca desilude.",
-    author: "P. C.",
-    source: "Google",
+    source: "Avaliação pública",
   },
 ];
 

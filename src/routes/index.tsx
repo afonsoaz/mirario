@@ -266,7 +266,7 @@ function Index() {
               Uma casa onde a qualidade se prova primeiro à mesa da família.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl leading-7 text-muted-foreground">
-              É esta confiança simples que guia o Mira Rio há mais de três décadas — receber cada pessoa com comida verdadeira e a generosidade do Norte, sempre com o Rio Ave a correr ali em baixo, à vista da janela.
+              É esta confiança simples que guia o Restaurante Mira Rio há mais de três décadas: receber cada pessoa com pratos locais verdadeiros e a generosidade do Norte, à vista do Rio Ave.
             </p>
           </div>
           <figure className="mx-auto mt-14 max-w-6xl px-5 md:px-8">
@@ -277,7 +277,6 @@ function Index() {
               loading="lazy"
             />
             <figcaption className="mt-4 text-center text-sm italic text-muted-foreground">
-              O Rio Ave visto da nossa janela — o mesmo vale que vê há gerações quem se senta à nossa mesa.
             </figcaption>
           </figure>
         </section>

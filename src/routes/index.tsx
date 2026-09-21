@@ -118,24 +118,26 @@ function Index() {
 
       <main id="inicio">
         <section id="historia" className="relative mx-auto max-w-7xl overflow-hidden px-5 pt-12 md:grid md:min-h-[680px] md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-4 md:px-8 md:pt-20 lg:min-h-[760px] lg:pt-24">
-          <div className="fernanda-hero-mobile md:hidden" aria-hidden="true">
-            <img src={fernandaLine} alt="" />
-          </div>
           <div className="relative z-10 self-center pb-12 md:pb-24">
             <p className="mb-4 text-xs font-semibold uppercase text-accent">Desde 1986</p>
-            <h1 className="max-w-2xl font-display text-5xl leading-[1.02] text-primary md:text-7xl">
-              A alma da cozinha,<br />pelas mãos de <em className="mt-2 block text-[1.22em] font-normal leading-[0.9]">D. Fernanda</em>
+            <h1 className="max-w-2xl font-display text-4xl leading-[1.08] text-primary sm:text-5xl md:text-7xl">
+              A alma da cozinha,<br />pelas mãos de <em className="mt-2 block text-[1.2em] font-normal leading-[0.92]">D. Fernanda</em>
             </h1>
-            <p className="mt-8 max-w-lg text-lg leading-8 text-muted-foreground">
-              No Mira Rio, cozinha-se como em casa. D. Fernanda prepara cada refeição com o mesmo cuidado com que alimenta os filhos e os netos, que continuam a sentar-se aqui à mesa quase todos os dias.
-            </p>
-            <p className="mt-6 max-w-lg border-l-2 border-accent pl-5 font-display text-2xl italic leading-snug text-foreground">
-              “Se é bom para a minha família, é bom para quem nos visita.”
-            </p>
-            <a className="hero-phone mt-7" href="tel:+351252853492" aria-label="Ligar para o Restaurante Mira Rio">
-              <span>Reservas e prato do dia</span>
-              <strong>+351 252 853 492</strong>
-            </a>
+            <div className="relative">
+              <div className="fernanda-hero-mobile md:hidden" aria-hidden="true">
+                <img src={fernandaLine} alt="" />
+              </div>
+              <p className="mt-8 max-w-lg pr-[42%] text-lg leading-8 text-muted-foreground md:pr-0">
+                No Mira Rio, cozinha-se como em casa. D. Fernanda prepara cada refeição com o mesmo cuidado com que alimenta os filhos e os netos, que continuam a sentar-se aqui à mesa quase todos os dias.
+              </p>
+              <p className="mt-6 max-w-lg border-l-2 border-accent pl-5 font-display text-2xl italic leading-snug text-foreground">
+                “Se é bom para a minha família, é bom para quem nos visita.”
+              </p>
+              <a className="hero-phone mt-7" href="tel:+351252853492" aria-label="Ligar para o Restaurante Mira Rio">
+                <span>Reservas e prato do dia</span>
+                <strong>+351 252 853 492</strong>
+              </a>
+            </div>
           </div>
 
           <div className="relative hidden h-full min-h-[640px] items-end justify-center self-end md:flex">

@@ -117,7 +117,10 @@ function Index() {
       </header>
 
       <main id="inicio">
-        <section id="historia" className="relative mx-auto grid min-h-[680px] max-w-7xl items-center gap-4 overflow-hidden px-5 pt-14 md:grid-cols-[1.05fr_0.95fr] md:px-8 md:pt-20 lg:min-h-[760px] lg:pt-24">
+        <section id="historia" className="relative mx-auto max-w-7xl overflow-hidden px-5 pt-12 md:grid md:min-h-[680px] md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-4 md:px-8 md:pt-20 lg:min-h-[760px] lg:pt-24">
+          <div className="fernanda-hero-mobile md:hidden" aria-hidden="true">
+            <img src={fernandaLine} alt="" />
+          </div>
           <div className="relative z-10 self-center pb-12 md:pb-24">
             <p className="mb-4 text-xs font-semibold uppercase text-accent">Desde 1986</p>
             <h1 className="max-w-2xl font-display text-5xl leading-[1.02] text-primary md:text-7xl">
@@ -135,7 +138,7 @@ function Index() {
             </a>
           </div>
 
-          <div className="relative flex h-[410px] items-end justify-center self-end md:h-full md:min-h-[640px]">
+          <div className="relative hidden h-full min-h-[640px] items-end justify-center self-end md:flex">
             <img className="fernanda-line" src={fernandaLine} alt="Retrato desenhado a traço fino de D. Fernanda" />
           </div>
         </section>

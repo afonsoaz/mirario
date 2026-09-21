@@ -57,6 +57,27 @@ const highlights = [
   },
 ];
 
+const menuSections = [
+  {
+    title: "Do mar",
+    items: [
+      "Bacalhau à Mira Rio",
+      "Polvo com batata cozida e molho verde",
+      "Robalo grelhado com batata cozida",
+      "Filetes de pescada",
+    ],
+  },
+  {
+    title: "Da terra",
+    items: [
+      "Bife à Mira Rio",
+      "Rojões à moda do Minho",
+      "Lombinhos de porco grelhados",
+      "Lombo de porco assado no forno",
+    ],
+  },
+];
+
 const reviews = [
   {
     quote: "Experimentei o bacalhau à Mira Rio e estava delicioso. Os funcionários são muito simpáticos e profissionais. Recomendo!",
@@ -84,6 +105,7 @@ function Index() {
           <div className="hidden items-center gap-8 text-xs font-semibold uppercase text-muted-foreground md:flex">
             <a className="nav-link" href="#historia">A nossa história</a>
             <a className="nav-link" href="#mesa">À mesa</a>
+            <a className="nav-link" href="#cardapio">Cardápio</a>
             <a className="nav-link" href="#visitar">Visite-nos</a>
           </div>
           <a className="button-primary" href="tel:+351252853492" aria-label="Ligar para reservar mesa">
@@ -105,6 +127,10 @@ function Index() {
             <p className="mt-6 max-w-lg border-l-2 border-accent pl-5 font-display text-2xl italic leading-snug text-foreground">
               “Se é bom para a minha família, é bom para quem nos visita.”
             </p>
+            <a className="hero-phone mt-7" href="tel:+351252853492" aria-label="Ligar para o Restaurante Mira Rio">
+              <span>Reservas e prato do dia</span>
+              <strong>+351 252 853 492</strong>
+            </a>
           </div>
 
           <div className="relative flex h-[410px] items-end justify-center self-end md:h-full md:min-h-[640px]">
@@ -143,6 +169,47 @@ function Index() {
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.text}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="cardapio" className="border-y border-border bg-secondary/40 py-20 md:py-28" aria-labelledby="cardapio-title">
+          <div className="mx-auto max-w-7xl px-5 md:px-8">
+            <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase text-accent">À escolha da casa</p>
+                <h2 id="cardapio-title" className="font-display text-5xl italic text-primary md:text-6xl">O nosso cardápio</h2>
+                <p className="mt-5 max-w-md leading-7 text-muted-foreground">
+                  Pratos portugueses de conforto, preparados com o tempo e o cuidado de sempre. A seleção pode variar conforme o mercado e a época.
+                </p>
+
+                <aside className="daily-special mt-10" aria-label="Informação sobre o prato do dia">
+                  <p className="text-[10px] font-semibold uppercase text-primary-foreground/70">De terça a sexta · ao almoço</p>
+                  <h3 className="mt-3 font-display text-4xl italic text-primary-foreground">Prato do dia</h3>
+                  <p className="mt-3 max-w-sm text-sm leading-6 text-primary-foreground/80">
+                    Uma sugestão caseira diferente, escolhida diariamente pela cozinha. À segunda-feira estamos encerrados.
+                  </p>
+                  <a className="mt-6 inline-flex font-semibold text-primary-foreground underline decoration-accent underline-offset-4" href="tel:+351252853492">
+                    Ligue para saber o prato de hoje
+                  </a>
+                </aside>
+              </div>
+
+              <div className="divide-y divide-border border-y border-border">
+                {menuSections.map((section) => (
+                  <div key={section.title} className="grid gap-6 py-8 sm:grid-cols-[9rem_1fr] md:py-10">
+                    <h3 className="font-display text-3xl italic text-primary">{section.title}</h3>
+                    <ul className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
+                      {section.items.map((item) => (
+                        <li key={item} className="border-b border-border/70 pb-4 text-sm leading-6 text-foreground">{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+                <div className="py-7 text-sm leading-6 text-muted-foreground">
+                  Consulte-nos sobre acompanhamentos, disponibilidade e preços do dia.
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

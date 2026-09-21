@@ -3,6 +3,8 @@ import fernandaLine from "../assets/dona-fernanda-line.png";
 import peixeAsset from "../assets/peixe-grelhado.jpg.asset.json";
 import assadoAsset from "../assets/assado-da-casa.jpg.asset.json";
 import salaAsset from "../assets/sala-mira-rio.jpg.asset.json";
+import rioAve from "../assets/rio-ave.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({
   component: Index,

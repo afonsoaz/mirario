@@ -264,10 +264,22 @@ function Index() {
               Uma casa onde a qualidade se prova primeiro à mesa da família.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl leading-7 text-muted-foreground">
-              É esta confiança simples que guia o Mira Rio há mais de três décadas — receber cada pessoa com comida verdadeira e a generosidade do Norte.
+              É esta confiança simples que guia o Mira Rio há mais de três décadas — receber cada pessoa com comida verdadeira e a generosidade do Norte, sempre com o Rio Ave a correr ali em baixo, à vista da janela.
             </p>
           </div>
+          <figure className="mx-auto mt-14 max-w-6xl px-5 md:px-8">
+            <img
+              src={rioAve.url}
+              alt="Vista do Rio Ave a partir do Restaurante Mira Rio, em Rebordões, Santo Tirso"
+              className="w-full rounded-sm border border-border object-cover shadow-sm"
+              loading="lazy"
+            />
+            <figcaption className="mt-4 text-center text-sm italic text-muted-foreground">
+              O Rio Ave visto da nossa janela — o mesmo vale que vê há gerações quem se senta à nossa mesa.
+            </figcaption>
+          </figure>
         </section>
+
       </main>
 
       <footer id="visitar" className="border-t border-border px-5 py-14 md:px-8">

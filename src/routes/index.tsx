@@ -64,14 +64,14 @@ const reviews = [
     source: "Google",
   },
   {
-    quote: "Comida deliciosa e com sabor caseiro. Ambiente perfeito para almoços em família e encontros entre amigos.",
-    author: "CCPEACEADEA",
-    source: "Tripadvisor",
+    quote: "Restaurante com tudo bom: comida, atendimento e preços bons.",
+    author: "Vítor",
+    source: "Google",
   },
   {
-    quote: "Bom ambiente familiar, comida caseira. Em especial a vitela assada e os rojões. A D. Fernanda cozinha muito bem.",
-    author: "L. C.",
-    source: "Avaliação pública",
+    quote: "Excelente refeição, boa relação preço/qualidade.",
+    author: "Comercial",
+    source: "Google",
   },
 ];
 

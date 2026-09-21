@@ -57,6 +57,24 @@ const highlights = [
   },
 ];
 
+const reviews = [
+  {
+    quote: "Experimentei o bacalhau à Mira Rio e estava delicioso. Os funcionários são muito simpáticos e profissionais. Recomendo!",
+    author: "Carlos",
+    source: "Google",
+  },
+  {
+    quote: "Restaurante com tudo bom: comida, atendimento e preços bons.",
+    author: "Vítor",
+    source: "Google",
+  },
+  {
+    quote: "Excelente refeição, boa relação preço/qualidade.",
+    author: "Comercial",
+    source: "Google",
+  },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -125,6 +143,43 @@ function Index() {
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.text}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-secondary/40 py-20 md:py-24" aria-labelledby="reviews-title">
+          <div className="mx-auto max-w-7xl px-5 md:px-8">
+            <div className="grid gap-10 border-b border-border pb-12 md:grid-cols-[1fr_auto] md:items-end">
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase text-accent">Palavras de quem nos visita</p>
+                <h2 id="reviews-title" className="font-display text-5xl italic text-primary md:text-6xl">À mesa, sentem-se em casa</h2>
+              </div>
+              <div className="flex flex-wrap gap-x-10 gap-y-5">
+                <a className="rating-link" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Google">
+                  <span className="rating-platform">Google</span>
+                  <span className="rating-number">4,3</span>
+                  <span className="rating-stars" aria-hidden="true">★★★★★</span>
+                  <span className="rating-count">156 avaliações</span>
+                </a>
+                <a className="rating-link" href="https://www.tripadvisor.com/Restaurant_Review-g1466996-d12700432-Reviews-Restaurante_Mira_Rio-Santo_Tirso_Porto_District_Northern_Portugal.html" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Tripadvisor">
+                  <span className="rating-platform">Tripadvisor</span>
+                  <span className="rating-number">4,5</span>
+                  <span className="rating-stars" aria-hidden="true">★★★★★</span>
+                  <span className="rating-count">16 avaliações</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="grid gap-px bg-border md:grid-cols-3">
+              {reviews.map((review) => (
+                <figure key={review.author} className="flex min-h-64 flex-col justify-between bg-background p-7 md:p-9">
+                  <blockquote className="font-display text-2xl italic leading-snug text-foreground">“{review.quote}”</blockquote>
+                  <figcaption className="mt-8 flex items-center justify-between text-[10px] font-semibold uppercase text-muted-foreground">
+                    <span>{review.author}</span>
+                    <span>{review.source} · 5/5</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 

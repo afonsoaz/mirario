@@ -103,7 +103,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8" aria-label="Navegação principal">
-          <a href="#inicio" className="font-display text-3xl font-semibold text-primary md:text-4xl">Mira Rio</a>
+          <a href="#inicio" className="font-display text-3xl font-semibold text-primary md:text-4xl">Restaurante Mira Rio</a>
           <div className="hidden items-center gap-8 text-xs font-semibold uppercase text-muted-foreground md:flex">
             <a className="nav-link" href="#historia">A nossa história</a>
             <a className="nav-link" href="#mesa">À mesa</a>

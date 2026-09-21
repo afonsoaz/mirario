@@ -265,7 +265,7 @@ function Index() {
             <img
               src={rioAve.url}
               alt="Vista do Rio Ave a partir do Restaurante Mira Rio, em Rebordões, Santo Tirso"
-              className="h-[85vh] w-full object-cover md:h-screen"
+              className="h-[40vh] w-full object-cover md:h-[55vh]"
               loading="lazy"
             />
           </figure>

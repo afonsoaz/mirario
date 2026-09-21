@@ -262,23 +262,23 @@ function Index() {
         <section className="azulejo-band py-20 md:py-28">
           <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
             <p className="text-xs font-semibold uppercase text-accent">De geração em geração</p>
-            <h2 className="mt-4 font-display text-4xl leading-tight text-primary md:text-6xl">
+          </div>
+          <figure className="mt-10 w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]">
+            <img
+              src={rioAve.url}
+              alt="Vista do Rio Ave a partir do Restaurante Mira Rio, em Rebordões, Santo Tirso"
+              className="h-[85vh] w-full object-cover md:h-screen"
+              loading="lazy"
+            />
+          </figure>
+          <div className="mx-auto mt-14 max-w-3xl px-5 text-center md:px-8">
+            <h2 className="font-display text-4xl leading-tight text-primary md:text-6xl">
               Uma casa onde a qualidade se prova primeiro à mesa da família.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl leading-7 text-muted-foreground">
               É esta confiança simples que guia o Restaurante Mira Rio há mais de três décadas: receber cada pessoa com pratos locais verdadeiros e a generosidade do Norte, à vista do Rio Ave.
             </p>
           </div>
-          <figure className="mx-auto mt-14 max-w-6xl px-5 md:px-8">
-            <img
-              src={rioAve.url}
-              alt="Vista do Rio Ave a partir do Restaurante Mira Rio, em Rebordões, Santo Tirso"
-              className="w-full rounded-sm border border-border object-cover shadow-sm"
-              loading="lazy"
-            />
-            <figcaption className="mt-4 text-center text-sm italic text-muted-foreground">
-            </figcaption>
-          </figure>
         </section>
 
       </main>

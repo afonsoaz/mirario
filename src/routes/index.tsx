@@ -105,12 +105,14 @@ function Index() {
           <div className="hidden items-center gap-8 text-xs font-semibold uppercase text-muted-foreground md:flex">
             <a className="nav-link" href="#historia">A nossa história</a>
             <a className="nav-link" href="#mesa">À mesa</a>
-            <a className="nav-link" href="#cardapio">Cardápio</a>
             <a className="nav-link" href="#visitar">Visite-nos</a>
           </div>
-          <a className="button-primary" href="tel:+351252853492" aria-label="Ligar para reservar mesa">
-            Reservar
-          </a>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a className="button-menu" href="#cardapio">Cardápio</a>
+            <a className="button-primary hidden sm:inline-flex" href="tel:+351252853492" aria-label="Ligar para reservar mesa">
+              Reservar
+            </a>
+          </div>
         </nav>
       </header>
 

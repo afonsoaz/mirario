@@ -182,6 +182,15 @@
   text-transform: uppercase;
 }
 
+@utility fernanda-line {
+  width: min(100%, 34rem);
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: contrast(0.92);
+  transform: translateY(1px);
+}
+
 @utility azulejo-frame {
   position: relative;
   padding: 0.75rem;

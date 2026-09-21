@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import fernandaAsset from "../assets/dona-fernanda.png.asset.json";
+import fernandaLine from "../assets/dona-fernanda-line.png";
 import peixeAsset from "../assets/peixe-grelhado.jpg.asset.json";
 import assadoAsset from "../assets/assado-da-casa.jpg.asset.json";
 import salaAsset from "../assets/sala-mira-rio.jpg.asset.json";
@@ -30,7 +30,7 @@ const details = [
   ["Morada", "Av. João Paulo II, 400\nRebordões, Santo Tirso"],
   ["A nossa cozinha", "Tradicional portuguesa\nFeita todos os dias"],
   ["Ao jantar", "Sexta e sábado\n19:00 — 22:00"],
-  ["À sua espera", "Estacionamento\nTakeaway · Multibanco"],
+  ["À sua espera", "Estacionamento · Takeaway\nVisa · Mastercard · Multibanco"],
 ];
 
 const highlights = [
@@ -62,7 +62,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8" aria-label="Navegação principal">
-          <a href="#inicio" className="font-display text-2xl italic text-primary">Mira Rio</a>
+          <a href="#inicio" className="font-display text-3xl font-semibold text-primary md:text-4xl">Mira Rio</a>
           <div className="hidden items-center gap-8 text-xs font-semibold uppercase text-muted-foreground md:flex">
             <a className="nav-link" href="#historia">A nossa história</a>
             <a className="nav-link" href="#mesa">À mesa</a>
@@ -75,11 +75,11 @@ function Index() {
       </header>
 
       <main id="inicio">
-        <section id="historia" className="relative mx-auto grid max-w-7xl items-center gap-12 overflow-hidden px-5 py-12 md:grid-cols-2 md:px-8 md:py-20 lg:gap-20 lg:py-24">
-          <div className="order-2 md:order-1">
-            <p className="mb-4 font-display text-2xl italic text-accent">Há mais de 30 anos</p>
-            <h1 className="max-w-xl font-display text-5xl leading-[1.04] text-primary md:text-7xl">
-              A alma da cozinha, pelas mãos da <em className="font-normal">D. Fernanda</em>
+        <section id="historia" className="relative mx-auto grid min-h-[680px] max-w-7xl items-center gap-4 overflow-hidden px-5 pt-14 md:grid-cols-[1.05fr_0.95fr] md:px-8 md:pt-20 lg:min-h-[760px] lg:pt-24">
+          <div className="relative z-10 self-center pb-12 md:pb-24">
+            <p className="mb-4 text-xs font-semibold uppercase text-accent">Desde 1986</p>
+            <h1 className="max-w-2xl font-display text-5xl leading-[1.02] text-primary md:text-7xl">
+              A alma da cozinha,<br />pelas mãos de <em className="mt-2 block text-[1.22em] font-normal leading-[0.9]">D. Fernanda</em>
             </h1>
             <p className="mt-8 max-w-lg text-lg leading-8 text-muted-foreground">
               No Mira Rio, cozinha-se como em casa. D. Fernanda prepara cada refeição com o mesmo cuidado com que alimenta os filhos e os netos, que continuam a sentar-se aqui à mesa quase todos os dias.
@@ -89,18 +89,12 @@ function Index() {
             </p>
           </div>
 
-          <div className="relative order-1 mx-auto w-full max-w-xl md:order-2">
-            <div className="azulejo-frame">
-              <img className="aspect-[4/5] w-full object-cover object-top" src={fernandaAsset.url} alt="D. Fernanda, cozinheira e alma do Restaurante Mira Rio" />
-            </div>
-            <div className="absolute -bottom-6 left-3 max-w-xs bg-primary p-5 text-primary-foreground shadow-xl md:-left-7 md:p-7">
-              <p className="font-display text-2xl italic">Tradição com nome próprio</p>
-              <p className="mt-1 text-xs uppercase opacity-80">D. Fernanda · Fundadora e cozinheira</p>
-            </div>
+          <div className="relative flex h-[410px] items-end justify-center self-end md:h-full md:min-h-[640px]">
+            <img className="fernanda-line" src={fernandaLine} alt="Retrato desenhado a traço fino de D. Fernanda" />
           </div>
         </section>
 
-        <section className="mt-8 bg-primary py-10 text-primary-foreground md:mt-0">
+        <section className="relative z-20 bg-primary py-10 text-primary-foreground">
           <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-10 px-5 md:grid-cols-4 md:px-8">
             {details.map(([label, value]) => (
               <div key={label}>
@@ -171,7 +165,10 @@ function Index() {
         </div>
         <div className="mx-auto mt-14 flex max-w-7xl flex-col gap-2 border-t border-border pt-7 text-[10px] uppercase text-muted-foreground sm:flex-row sm:justify-between">
           <p>© 2026 Restaurante Mira Rio</p>
-          <p>Cozinha portuguesa com tradição · Santo Tirso</p>
+          <div className="flex flex-col gap-2 sm:items-end">
+            <p>Visa · Mastercard · Multibanco</p>
+            <a className="transition-colors hover:text-primary" href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noreferrer">Livro de Reclamações</a>
+          </div>
         </div>
       </footer>
     </div>

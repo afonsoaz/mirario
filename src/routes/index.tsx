@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 const details = [
   ["Morada", "Av. João Paulo II, 400\nRebordões, Santo Tirso"],
   ["A nossa cozinha", "Tradicional portuguesa\nFeita todos os dias"],
-  ["Ao jantar", "Sexta e sábado\n19:00 — 22:00"],
+  ["Ao almoço", "Terça a domingo\n12:00 — 15:00"],
   ["À sua espera", "Estacionamento · Takeaway\nVisa · Mastercard · Multibanco"],
 ];
 
@@ -279,7 +279,6 @@ function Index() {
             <p className="footer-label">Horário</p>
             <div className="mt-5 space-y-2 text-sm text-muted-foreground">
               <p>Terça a domingo · 12:00 — 15:00</p>
-              <p>Sexta e sábado · 19:00 — 22:00</p>
               <p className="font-semibold text-accent">Segunda-feira · Encerrado</p>
             </div>
           </div>

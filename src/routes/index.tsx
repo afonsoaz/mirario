@@ -124,7 +124,7 @@ function Index() {
             <img src={fernandaLine} alt="" />
           </div>
           <div className="relative z-10 self-center pb-12 lg:pb-24">
-            <p className="mb-4 text-xs font-semibold uppercase text-accent">Desde 1986</p>
+            <p className="mb-4 text-xs font-semibold uppercase text-accent">DESDE 1985</p>
             <h1 className="max-w-[58%] font-display text-4xl leading-[1.08] text-primary sm:text-5xl lg:max-w-2xl lg:text-7xl">
               <span className="whitespace-nowrap">A alma da cozinha,</span><br />pelas mãos de <em className="mt-2 block text-[1.2em] font-normal leading-[0.92]">D. Fernanda</em>
             </h1>

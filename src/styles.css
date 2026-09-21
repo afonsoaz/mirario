@@ -19,6 +19,8 @@
  */
 
 @theme inline {
+  --font-display: "Instrument Serif", serif;
+  --font-sans: "Work Sans", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,26 +64,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 0.25rem;
+  --background: oklch(0.985 0.006 90);
+  --foreground: oklch(0.25 0.025 55);
+  --card: oklch(0.995 0.002 90);
+  --card-foreground: oklch(0.25 0.025 55);
+  --popover: oklch(0.995 0.002 90);
+  --popover-foreground: oklch(0.25 0.025 55);
+  --primary: oklch(0.38 0.13 251);
+  --primary-foreground: oklch(0.99 0.003 90);
+  --secondary: oklch(0.94 0.018 95);
+  --secondary-foreground: oklch(0.32 0.08 251);
+  --muted: oklch(0.94 0.012 90);
+  --muted-foreground: oklch(0.48 0.025 55);
+  --accent: oklch(0.47 0.09 50);
+  --accent-foreground: oklch(0.99 0.003 90);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.82 0.035 90);
+  --input: oklch(0.82 0.035 90);
+  --ring: oklch(0.38 0.13 251);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +142,66 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+    scroll-behavior: smooth;
   }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--primary) 20%, transparent);
+  }
+}
+
+@utility button-primary {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 200ms ease, transform 200ms ease;
+  &:hover { background: var(--accent); transform: translateY(-1px); }
+  &:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+}
+
+@utility nav-link {
+  transition: color 180ms ease;
+  &:hover { color: var(--primary); }
+  &:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+}
+
+@utility footer-label {
+  color: var(--accent);
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@utility azulejo-frame {
+  position: relative;
+  padding: 0.75rem;
+  background-color: var(--background);
+  background-image:
+    linear-gradient(45deg, transparent 43%, color-mix(in oklab, var(--primary) 28%, transparent) 44% 46%, transparent 47%),
+    linear-gradient(-45deg, transparent 43%, color-mix(in oklab, var(--primary) 28%, transparent) 44% 46%, transparent 47%);
+  background-size: 2rem 2rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 30%, transparent);
+  box-shadow: 0 24px 60px -35px color-mix(in oklab, var(--foreground) 35%, transparent);
+}
+
+@utility azulejo-band {
+  border-top: 1px solid color-mix(in oklab, var(--primary) 16%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--primary) 16%, transparent);
+  background-color: color-mix(in oklab, var(--primary) 4%, var(--background));
+  background-image: radial-gradient(circle at center, color-mix(in oklab, var(--primary) 13%, transparent) 1px, transparent 1.5px);
+  background-size: 1.5rem 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }

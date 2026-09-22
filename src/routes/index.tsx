@@ -223,7 +223,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="border-y border-border bg-secondary/40 py-20 md:py-24" aria-labelledby="reviews-title">
+        <section className="border-y border-border bg-secondary/40 pt-16 pb-10 md:pt-24 md:pb-20" aria-labelledby="reviews-title">
           <div className="mx-auto max-w-7xl px-5 md:px-8">
             <div className="grid gap-10 border-b border-border pb-12 md:grid-cols-[1fr_auto] md:items-end">
               <div>
@@ -248,9 +248,9 @@ function Index() {
 
             <div className="grid gap-px bg-border md:grid-cols-3">
               {reviews.map((review) => (
-                <figure key={review.author} className="flex min-h-64 flex-col justify-between bg-background p-7 md:p-9">
+                <figure key={review.author} className="flex flex-col justify-between bg-background p-7 md:min-h-64 md:p-9">
                   <blockquote className="font-display text-2xl italic leading-snug text-foreground">“{review.quote}”</blockquote>
-                  <figcaption className="mt-8 flex items-center justify-between text-[10px] font-semibold uppercase text-muted-foreground">
+                  <figcaption className="mt-5 flex items-center justify-between text-[10px] font-semibold uppercase text-muted-foreground">
                     <span>{review.author}</span>
                     <span>{review.source} · 5/5</span>
                   </figcaption>
@@ -260,7 +260,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="azulejo-band py-20 md:py-28">
+        <section className="azulejo-band pt-8 pb-20 md:pt-16 md:pb-28">
           <figure className="w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]">
             <img
               src={rioAve.url}

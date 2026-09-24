@@ -447,7 +447,7 @@ function Index() {
           <div className="md:text-right">
             <p className="footer-label">Reservas e pedidos</p>
             <a className="mt-5 block font-display text-2xl text-primary" href="tel:+351252853492">+351 252 853 492</a>
-            <a className="mt-2 block break-all text-sm text-muted-foreground" href="mailto:mirario.sts@gmail.com">mirario.sts@gmail.com</a>
+            <a className="mt-2 block break-all text-sm text-muted-foreground" href="mailto:geral@restaurantemirario.com">geral@restaurantemirario.com</a>
             <a className="button-primary mt-6" href="tel:+351252853492">Ligar agora</a>
           </div>
         </div>

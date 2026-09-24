@@ -38,6 +38,7 @@ export const Route = createFileRoute("/")({
             "Cozinha regional caseira em Rebordões, Santo Tirso, conduzida há mais de 30 anos por D. Fernanda.",
           servesCuisine: "Portuguesa",
           telephone: "+351252853492",
+          email: "geral@restaurantemirario.com",
           url: "https://restaurantemirario.com",
           image: "https://restaurantemirario.com/favicon.png",
           address: {

@@ -19,11 +19,6 @@ day. It is written in European Portuguese.
   <img src="docs/img/desktop.jpg" width="100%" alt="The first screen on a laptop: the headline, the phone number and a line drawing of D. Fernanda">
 </p>
 
-The images are AI too. The four photographs on the page, of the food, the dining room and the
-river, are generated illustrations rather than pictures taken at the restaurant, and so is
-the logo in the favicon; their metadata says so. The drawing of D. Fernanda was made with AI
-from a photograph of her.
-
 TanStack Start, React 19 and Tailwind CSS 4, rendered on the server and hosted by Lovable.
 One page, about 450 lines of it, on top of the template Lovable starts every project from.
 

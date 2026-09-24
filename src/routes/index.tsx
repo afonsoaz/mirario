@@ -156,7 +156,19 @@ function Index() {
             {details.map(([label, value]) => (
               <div key={label}>
                 <p className="mb-2 text-[10px] font-semibold uppercase opacity-60">{label}</p>
-                <p className="whitespace-pre-line font-display text-lg italic leading-snug">{value}</p>
+                {label === "Morada" ? (
+                  <a
+                    className="whitespace-pre-line font-display text-lg italic leading-snug underline decoration-accent/60 underline-offset-4 transition-colors hover:decoration-accent"
+                    href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes+Av.+Joao+Paulo+II+400+Santo+Tirso"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Abrir a morada do Restaurante Mira Rio no Google Maps"
+                  >
+                    {value}
+                  </a>
+                ) : (
+                  <p className="whitespace-pre-line font-display text-lg italic leading-snug">{value}</p>
+                )}
               </div>
             ))}
           </div>

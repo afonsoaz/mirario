@@ -26,6 +26,64 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          name: "Restaurante Mira Rio",
+          description:
+            "Cozinha portuguesa caseira em Rebordões, Santo Tirso, conduzida há mais de 30 anos por D. Fernanda.",
+          servesCuisine: "Portuguesa",
+          telephone: "+351252853492",
+          url: "https://restaurantemirario.com",
+          image: "https://restaurantemirario.com/favicon.png",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Av. João Paulo II, 400",
+            addressLocality: "Rebordões, Santo Tirso",
+            addressRegion: "Porto",
+            addressCountry: "PT",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 41.342,
+            longitude: -8.486,
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              opens: "12:00",
+              closes: "15:00",
+            },
+          ],
+          priceRange: "€€",
+          paymentAccepted: "Visa, Mastercard, Multibanco",
+          acceptsReservations: "True",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.3",
+            reviewCount: "156",
+          },
+          review: reviews.map((r) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: r.author },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            reviewBody: r.quote,
+            publisher: { "@type": "Organization", name: "Google Maps" },
+          })),
+        }),
+      },
+    ],
   }),
 });
 

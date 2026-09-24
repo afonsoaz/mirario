@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import fernandaLine from "../assets/dona-fernanda-line.png";
 import peixeAsset from "../assets/peixe-grelhado.jpg.asset.json";

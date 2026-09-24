@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import fernandaLine from "../assets/dona-fernanda-line.png";
 import peixeAsset from "../assets/peixe-grelhado.jpg.asset.json";
@@ -98,6 +99,67 @@ const reviews = [
   },
 ];
 
+function OpenNowBadge() {
+  // Restaurante Mira Rio: aberto terça a domingo, 12:00–15:00. Segunda encerrado.
+  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      const now = new Date();
+      // Horário de Portugal (continente)
+      const parts = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Lisbon",
+        weekday: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      }).formatToParts(now);
+      const get = (t: string) => parts.find((p) => p.type === t)?.value ?? "";
+      const weekday = get("weekday").toLowerCase();
+      const hour = parseInt(get("hour"), 10);
+      const minute = parseInt(get("minute"), 10);
+      const time = hour + minute / 60;
+      // Segunda (Mon) encerrado; terça a domingo 12:00–15:00
+      const isMonday = weekday === "mon";
+      const inHours = !isMonday && time >= 12 && time < 15;
+      setOpen(inHours);
+    };
+    check();
+    setMounted(true);
+    const id = setInterval(check, 60_000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (!mounted || !open) return null;
+
+  return (
+    <p className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground md:text-muted-foreground">
+      <span className="relative inline-flex h-2.5 w-2.5">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/70" />
+        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+      </span>
+      Aberto agora
+    </p>
+  );
+}
+
+function GoogleMapsLogo({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" role="img" aria-hidden="true">
+      <path d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z" />
+    </svg>
+  );
+}
+
+function TripadvisorLogo({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" role="img" aria-hidden="true">
+      <path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z" />
+    </svg>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -139,6 +201,7 @@ function Index() {
               <p className="mt-6 max-w-lg border-l-2 border-accent pl-5 font-display text-2xl italic leading-snug text-foreground">
                 “Dou aos meus clientes aquilo que dou aos meus filhos.”
               </p>
+              <OpenNowBadge />
               <a className="hero-phone mt-7" href="tel:+351252853492" aria-label="Ligar para o Restaurante Mira Rio">
                 <span>Reservas e prato do dia</span>
                 <strong>+351 252 853 492</strong>
@@ -246,14 +309,20 @@ function Index() {
                 <h2 id="reviews-title" className="font-display text-5xl italic text-primary md:text-6xl">À mesa, sentem-se em casa</h2>
               </div>
               <div className="flex flex-wrap gap-x-10 gap-y-5">
-                <a className="rating-link" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Google">
-                  <span className="rating-platform">Google</span>
+                <a className="rating-link" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Google Maps">
+                  <span className="rating-platform inline-flex items-center gap-1.5">
+                    <GoogleMapsLogo className="h-3.5 w-3.5 text-[#4285F4]" />
+                    Google Maps
+                  </span>
                   <span className="rating-number">4,3</span>
                   <span className="rating-stars" aria-hidden="true">★★★★★</span>
                   <span className="rating-count">156 avaliações</span>
                 </a>
                 <a className="rating-link" href="https://www.tripadvisor.com/Restaurant_Review-g1466996-d12700432-Reviews-Restaurante_Mira_Rio-Santo_Tirso_Porto_District_Northern_Portugal.html" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Tripadvisor">
-                  <span className="rating-platform">Tripadvisor</span>
+                  <span className="rating-platform inline-flex items-center gap-1.5">
+                    <TripadvisorLogo className="h-3.5 w-3.5 text-[#00AF87]" />
+                    Tripadvisor
+                  </span>
                   <span className="rating-number">4,5</span>
                   <span className="rating-stars" aria-hidden="true">★★★★★</span>
                   <span className="rating-count">16 avaliações</span>
@@ -267,7 +336,10 @@ function Index() {
                   <blockquote className="font-display text-2xl italic leading-snug text-foreground">“{review.quote}”</blockquote>
                   <figcaption className="mt-5 flex items-center justify-between text-[10px] font-semibold uppercase text-muted-foreground">
                     <span>{review.author}</span>
-                    <span>{review.source} · 5/5</span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <GoogleMapsLogo className="h-3 w-3 text-[#4285F4]" />
+                      Google Maps · 5/5
+                    </span>
                   </figcaption>
                 </figure>
               ))}

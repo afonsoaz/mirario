@@ -289,7 +289,10 @@ function Index() {
                   <blockquote className="font-display text-2xl italic leading-snug text-foreground">“{review.quote}”</blockquote>
                   <figcaption className="mt-5 flex items-center justify-between text-[10px] font-semibold uppercase text-muted-foreground">
                     <span>{review.author}</span>
-                    <span>{review.source} · 5/5</span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <GoogleMapsLogo className="h-3 w-3 text-[#4285F4]" />
+                      Google Maps · 5/5
+                    </span>
                   </figcaption>
                 </figure>
               ))}

@@ -201,6 +201,7 @@ function Index() {
               <p className="mt-6 max-w-lg border-l-2 border-accent pl-5 font-display text-2xl italic leading-snug text-foreground">
                 “Dou aos meus clientes aquilo que dou aos meus filhos.”
               </p>
+              <OpenNowBadge />
               <a className="hero-phone mt-7" href="tel:+351252853492" aria-label="Ligar para o Restaurante Mira Rio">
                 <span>Reservas e prato do dia</span>
                 <strong>+351 252 853 492</strong>

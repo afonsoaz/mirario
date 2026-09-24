@@ -11,16 +11,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Restaurante Mira Rio — Cozinha Portuguesa em Santo Tirso" },
+      { title: "Restaurante Mira Rio - Cozinha Regional em Rebordões" },
       {
         name: "description",
         content:
-          "Há mais de 30 anos, D. Fernanda serve cozinha portuguesa caseira no Restaurante Mira Rio, em Rebordões, Santo Tirso.",
+          "Há mais de 30 anos, D. Fernanda serve cozinha regional caseira no Restaurante Mira Rio em Rebordões, Santo Tirso.",
       },
-      { property: "og:title", content: "Restaurante Mira Rio — Santo Tirso" },
+      { property: "og:title", content: "Restaurante Mira Rio - Cozinha Regional em Rebordões" },
       {
         property: "og:description",
-        content: "Cozinha portuguesa com o sabor e o cuidado de uma casa de família.",
+        content:
+          "Há mais de 30 anos, D. Fernanda serve cozinha regional caseira no Restaurante Mira Rio em Rebordões, Santo Tirso.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -34,7 +35,7 @@ export const Route = createFileRoute("/")({
           "@type": "Restaurant",
           name: "Restaurante Mira Rio",
           description:
-            "Cozinha portuguesa caseira em Rebordões, Santo Tirso, conduzida há mais de 30 anos por D. Fernanda.",
+            "Cozinha regional caseira em Rebordões, Santo Tirso, conduzida há mais de 30 anos por D. Fernanda.",
           servesCuisine: "Portuguesa",
           telephone: "+351252853492",
           url: "https://restaurantemirario.com",

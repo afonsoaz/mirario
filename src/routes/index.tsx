@@ -262,14 +262,20 @@ function Index() {
                 <h2 id="reviews-title" className="font-display text-5xl italic text-primary md:text-6xl">À mesa, sentem-se em casa</h2>
               </div>
               <div className="flex flex-wrap gap-x-10 gap-y-5">
-                <a className="rating-link" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Google">
-                  <span className="rating-platform">Google</span>
+                <a className="rating-link" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Google Maps">
+                  <span className="rating-platform inline-flex items-center gap-1.5">
+                    <GoogleMapsLogo className="h-3.5 w-3.5 text-[#4285F4]" />
+                    Google Maps
+                  </span>
                   <span className="rating-number">4,3</span>
                   <span className="rating-stars" aria-hidden="true">★★★★★</span>
                   <span className="rating-count">156 avaliações</span>
                 </a>
                 <a className="rating-link" href="https://www.tripadvisor.com/Restaurant_Review-g1466996-d12700432-Reviews-Restaurante_Mira_Rio-Santo_Tirso_Porto_District_Northern_Portugal.html" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Tripadvisor">
-                  <span className="rating-platform">Tripadvisor</span>
+                  <span className="rating-platform inline-flex items-center gap-1.5">
+                    <TripadvisorLogo className="h-3.5 w-3.5 text-[#00AF87]" />
+                    Tripadvisor
+                  </span>
                   <span className="rating-number">4,5</span>
                   <span className="rating-stars" aria-hidden="true">★★★★★</span>
                   <span className="rating-count">16 avaliações</span>

@@ -189,13 +189,13 @@ function Index() {
             <img src={fernandaLine} alt="" />
           </div>
           <div className="relative z-10 self-center pb-12 lg:pb-24">
-            <p className="mb-4 text-xs font-semibold uppercase text-accent">DESDE 1985</p>
+            <p className="mb-4 text-xs font-semibold uppercase text-accent">DESDE FEVEREIRO DE 1985</p>
             <h1 className="max-w-[58%] font-display text-4xl leading-[1.08] text-primary sm:text-5xl lg:max-w-2xl lg:text-7xl">
               <span className="whitespace-nowrap">A alma da cozinha,</span><br />pelas mãos de <em className="mt-2 block text-[1.2em] font-normal leading-[0.92]">D. Fernanda</em>
             </h1>
             <div className="relative">
               <p className="mt-8 max-w-lg text-base leading-7 text-foreground md:text-muted-foreground">
-                No Restaurante Mira Rio, cozinha-se como em casa.
+                {'\n\n'}No Restaurante Mira Rio, cozinha-se como em casa.
                 D. Fernanda prepara cada refeição com o mesmo cuidado com que alimenta os filhos e os netos, que continuam a sentar-se aqui à mesa quase todos os dias.
               </p>
               <p className="mt-6 max-w-lg border-l-2 border-accent pl-5 font-display text-2xl italic leading-snug text-foreground">
@@ -374,7 +374,7 @@ function Index() {
       <footer id="visitar" className="border-t border-border px-5 py-14 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1fr_1fr_0.8fr]">
           <div>
-            <p className="font-display text-4xl italic text-primary">Mira Rio</p>
+            <p className="font-display text-4xl italic text-primary">Restaurante Mira Rio</p>
             <p className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">Av. João Paulo II, 400<br />4795 Rebordões, Santo Tirso</p>
             <a className="mt-5 inline-block text-sm font-semibold text-primary underline decoration-accent underline-offset-4" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer">Ver no mapa</a>
           </div>

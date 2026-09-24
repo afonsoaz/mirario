@@ -99,6 +99,51 @@ const reviews = [
   },
 ];
 
+function OpenNowBadge() {
+  // Restaurante Mira Rio: aberto terça a domingo, 12:00–15:00. Segunda encerrado.
+  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      const now = new Date();
+      // Horário de Portugal (continente)
+      const parts = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Lisbon",
+        weekday: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      }).formatToParts(now);
+      const get = (t: string) => parts.find((p) => p.type === t)?.value ?? "";
+      const weekday = get("weekday").toLowerCase();
+      const hour = parseInt(get("hour"), 10);
+      const minute = parseInt(get("minute"), 10);
+      const time = hour + minute / 60;
+      // Segunda (Mon) encerrado; terça a domingo 12:00–15:00
+      const isMonday = weekday === "mon";
+      const inHours = !isMonday && time >= 12 && time < 15;
+      setOpen(inHours);
+    };
+    check();
+    setMounted(true);
+    const id = setInterval(check, 60_000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (!mounted || !open) return null;
+
+  return (
+    <p className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground md:text-muted-foreground">
+      <span className="relative inline-flex h-2.5 w-2.5">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/70" />
+        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+      </span>
+      Aberto agora
+    </p>
+  );
+}
+
 function GoogleMapsLogo({ className = "" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" role="img" aria-hidden="true">

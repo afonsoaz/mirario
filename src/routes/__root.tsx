@@ -78,6 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { name: "theme-color", content: "#FCFAF6" },
+      { name: "google-site-verification", content: "B8p82Jv2z_QbEsoFmeHc1AWJODMg_8kGR2P2TCGVmzM" },
       { name: "author", content: "Restaurante Mira Rio" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

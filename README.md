@@ -4,9 +4,9 @@
 
 The website of Restaurante Mira Rio, my grandparents' restaurant in Rebordões, Santo Tirso,
 in the north of Portugal. It opened in February 1985 within sight of the Rio Ave, and
-D. Fernanda has run it, and cooked in it, for more than thirty years. Her sons and grandsons
-(including my father, my aunt and my cousins) still eat there almost every day, and that is
-the case the site makes for the food: she serves it to her own family first.
+D. Fernanda has run it, and cooked in it, for more than thirty years. Her children and
+grandchildren (including my father, my aunt and my cousins) still eat there almost every day,
+and that is the case the site makes for the food: she serves it to her own family first.
 
 For someone deciding where to have lunch, the page does three things. It says what kind of
 place this is, it shows what is cooked there, and it keeps the phone number one tap away,

@@ -269,7 +269,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="relative hidden h-full min-h-[640px] items-end justify-center self-end lg:flex">
+          <div className="relative hidden h-full items-end justify-center lg:flex">
             <img className="fernanda-line" src={fernandaLine} alt="Retrato desenhado a traço fino de D. Fernanda" />
           </div>
         </section>

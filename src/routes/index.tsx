@@ -244,11 +244,11 @@ function Index() {
       </header>
 
       <main id="inicio">
-        <section id="historia" className="relative mx-auto max-w-7xl overflow-hidden px-5 pt-12 lg:grid lg:min-h-[680px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-4 lg:px-8 lg:pt-20 lg:min-h-[760px] lg:pt-24">
+        <section id="historia" className="relative mx-auto max-w-7xl overflow-hidden px-5 pt-12 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-4 lg:px-8 lg:min-h-[680px] lg:pt-24">
           <div className="fernanda-hero-mobile lg:hidden" aria-hidden="true">
             <img src={fernandaLine} alt="" />
           </div>
-          <div className="relative z-10 self-center pb-12 lg:pb-24">
+          <div className="relative z-10 self-center pb-12 lg:pb-10">
             <p className="mb-4 text-xs font-semibold uppercase text-accent">DESDE FEVEREIRO DE 1985</p>
             <h1 className="max-w-[58%] font-display text-4xl leading-[1.08] text-primary sm:text-5xl lg:max-w-2xl lg:text-7xl">
               <span className="sr-only">Restaurante Mira Rio — </span><span className="whitespace-nowrap">A alma da cozinha,</span><br />pelas mãos de <em className="mt-2 block text-[1.2em] font-normal leading-[0.92]">D. Fernanda</em>
@@ -269,7 +269,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="relative hidden h-full min-h-[640px] items-end justify-center self-end lg:flex">
+          <div className="relative hidden h-[560px] items-end justify-center lg:flex">
             <img className="fernanda-line" src={fernandaLine} alt="Retrato desenhado a traço fino de D. Fernanda" />
           </div>
         </section>

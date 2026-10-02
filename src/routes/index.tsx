@@ -194,8 +194,8 @@ function OpenNowBadge() {
   if (!mounted || !open) return null;
 
   return (
-    <p className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground md:text-muted-foreground">
-      <span className="relative inline-flex h-2.5 w-2.5">
+    <p className="mt-6 flex w-fit items-center gap-2 text-sm font-semibold text-foreground md:text-muted-foreground">
+      <span className="relative inline-flex h-2.5 w-2.5 shrink-0">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/70" />
         <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
       </span>

@@ -442,7 +442,7 @@ function Index() {
             <p className="footer-label">Horário</p>
             <div className="mt-5 space-y-2 text-sm text-muted-foreground">
               <p>Terça a domingo · 12:00 — 15:00</p>
-              <p className="font-semibold text-accent">Segunda-feira · Encerrado</p>
+              <p>Segunda-feira · Encerrado</p>
             </div>
           </div>
           <div className="md:text-right">

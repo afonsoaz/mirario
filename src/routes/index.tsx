@@ -248,7 +248,7 @@ function Index() {
           <div className="fernanda-hero-mobile lg:hidden" aria-hidden="true">
             <img src={fernandaLine} alt="" />
           </div>
-          <div className="relative z-10 self-center pb-12 lg:pb-24">
+          <div className="relative z-10 self-center pb-12 lg:pb-10">
             <p className="mb-4 text-xs font-semibold uppercase text-accent">DESDE FEVEREIRO DE 1985</p>
             <h1 className="max-w-[58%] font-display text-4xl leading-[1.08] text-primary sm:text-5xl lg:max-w-2xl lg:text-7xl">
               <span className="sr-only">Restaurante Mira Rio — </span><span className="whitespace-nowrap">A alma da cozinha,</span><br />pelas mãos de <em className="mt-2 block text-[1.2em] font-normal leading-[0.92]">D. Fernanda</em>

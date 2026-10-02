@@ -200,8 +200,8 @@
 }
 
 @utility fernanda-line {
-  width: min(100%, 34rem);
-  max-height: 100%;
+  width: min(100%, 38rem);
+  max-height: 122%;
   object-fit: contain;
   object-position: center bottom;
   filter: contrast(0.92);

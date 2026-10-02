@@ -244,7 +244,7 @@ function Index() {
       </header>
 
       <main id="inicio">
-        <section id="historia" className="relative mx-auto max-w-7xl overflow-hidden px-5 pt-12 lg:grid lg:min-h-[680px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-4 lg:px-8 lg:pt-20 lg:min-h-[760px] lg:pt-24">
+        <section id="historia" className="relative mx-auto max-w-7xl overflow-hidden px-5 pt-12 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-4 lg:px-8 lg:min-h-[680px] lg:pt-24">
           <div className="fernanda-hero-mobile lg:hidden" aria-hidden="true">
             <img src={fernandaLine} alt="" />
           </div>

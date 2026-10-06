@@ -375,7 +375,7 @@ function Index() {
                     Google Maps
                   </span>
                   <span className="rating-number">4,3</span>
-                  <span className="rating-stars" aria-hidden="true">★★★★★</span>
+                  <Stars rating={4.3} />
                   <span className="rating-count">156 avaliações</span>
                 </a>
                 <a className="rating-link" href="https://www.tripadvisor.com/Restaurant_Review-g1466996-d12700432-Reviews-Restaurante_Mira_Rio-Santo_Tirso_Porto_District_Northern_Portugal.html" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Tripadvisor">
@@ -384,7 +384,7 @@ function Index() {
                     Tripadvisor
                   </span>
                   <span className="rating-number">4,5</span>
-                  <span className="rating-stars" aria-hidden="true">★★★★★</span>
+                  <Stars rating={4.5} />
                   <span className="rating-count">16 avaliações</span>
                 </a>
               </div>

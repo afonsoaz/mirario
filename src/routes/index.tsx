@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import fernandaLine from "../assets/dona-fernanda-line.png";
-import peixeAsset from "../assets/peixe-grelhado.jpg.asset.json";
-import assadoAsset from "../assets/assado-da-casa.jpg.asset.json";
+import peixePhoto from "../assets/peixe-grelhado-toalha.jpg";
+import assadoPhoto from "../assets/assado-da-casa-toalha.jpg";
 import salaAsset from "../assets/sala-mira-rio.jpg.asset.json";
 import rioAve from "../assets/rio-ave.jpg.asset.json";
 
@@ -98,14 +98,14 @@ const details = [
 
 const highlights = [
   {
-    image: peixeAsset.url,
+    image: peixePhoto,
     alt: "Peixe grelhado com batata cozida e legumes",
     eyebrow: "Sabores do mar",
     title: "Peixe no ponto",
     text: "Preparado com simplicidade para deixar falar a qualidade de cada ingrediente.",
   },
   {
-    image: assadoAsset.url,
+    image: assadoPhoto,
     alt: "Assado tradicional com batatas douradas",
     eyebrow: "Receitas de família",
     title: "Assados da casa",

@@ -294,26 +294,34 @@
 }
 
 @utility rating-stars {
-  color: var(--accent);
-  font-size: 0.85rem;
-  line-height: 1;
-  letter-spacing: 0.05em;
+  display: inline-flex;
+  gap: 0.15rem;
+  align-items: center;
+}
+
+@utility rating-star {
   position: relative;
   display: inline-block;
+  width: 0.95rem;
+  height: 0.95rem;
+  & svg {
+    width: 0.95rem;
+    height: 0.95rem;
+    display: block;
+  }
 }
 
-@utility rating-stars-empty {
-  color: color-mix(in oklab, var(--muted-foreground) 22%, transparent);
-  display: block;
+@utility rating-star-empty {
+  fill: color-mix(in oklab, var(--muted-foreground) 22%, transparent);
 }
 
-@utility rating-stars-fill {
+@utility rating-star-fill {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
   overflow: hidden;
-  white-space: nowrap;
-  color: var(--accent);
-  display: block;
+  fill: var(--accent);
 }
 
 @utility rating-count {

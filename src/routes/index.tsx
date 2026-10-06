@@ -204,14 +204,27 @@ function OpenNowBadge() {
   );
 }
 
+const STAR_PATH =
+  "M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5z";
+
 function Stars({ rating }: { rating: number }) {
-  const pct = Math.min(100, Math.max(0, (rating / 5) * 100));
   return (
     <span className="rating-stars" aria-hidden="true">
-      <span className="rating-stars-empty">★★★★★</span>
-      <span className="rating-stars-fill" style={{ width: `${pct}%` }}>
-        ★★★★★
-      </span>
+      {[0, 1, 2, 3, 4].map((i) => {
+        const fill = Math.min(1, Math.max(0, rating - i));
+        return (
+          <span key={i} className="rating-star">
+            <svg viewBox="0 0 24 24" className="rating-star-empty">
+              <path d={STAR_PATH} />
+            </svg>
+            <span className="rating-star-fill" style={{ width: `${fill * 100}%` }}>
+              <svg viewBox="0 0 24 24">
+                <path d={STAR_PATH} />
+              </svg>
+            </span>
+          </span>
+        );
+      })}
     </span>
   );
 }

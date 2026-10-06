@@ -295,13 +295,15 @@
 
 @utility rating-stars {
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
   position: relative;
   display: inline-block;
 }
 
 @utility rating-stars-empty {
-  color: color-mix(in oklab, var(--accent) 25%, transparent);
+  color: color-mix(in oklab, var(--muted-foreground) 22%, transparent);
   display: block;
 }
 

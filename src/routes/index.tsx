@@ -204,6 +204,18 @@ function OpenNowBadge() {
   );
 }
 
+function Stars({ rating }: { rating: number }) {
+  const pct = Math.min(100, Math.max(0, (rating / 5) * 100));
+  return (
+    <span className="rating-stars" aria-hidden="true">
+      <span className="rating-stars-empty">★★★★★</span>
+      <span className="rating-stars-fill" style={{ width: `${pct}%` }}>
+        ★★★★★
+      </span>
+    </span>
+  );
+}
+
 function GoogleMapsLogo({ className = "" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" role="img" aria-hidden="true">

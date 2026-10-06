@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+Food-photo edits are bundled image imports; keep untouched dining-room media on its existing asset pointer to limit changes to the requested photos.

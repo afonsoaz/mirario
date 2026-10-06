@@ -296,6 +296,22 @@
 @utility rating-stars {
   color: var(--accent);
   font-size: 0.72rem;
+  position: relative;
+  display: inline-block;
+}
+
+@utility rating-stars-empty {
+  color: color-mix(in oklab, var(--accent) 25%, transparent);
+  display: block;
+}
+
+@utility rating-stars-fill {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--accent);
+  display: block;
 }
 
 @utility rating-count {

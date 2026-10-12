@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage } from "@/components/LegalPage";
 
 const title = "Política de Cookies | Restaurante Mira Rio";
@@ -28,9 +28,6 @@ function Page() {
       <p>Por isso não lhe pedimos consentimento: não há nada a aceitar ou recusar.</p>
       <h2>Ligações externas</h2>
       <p>Se clicar em ligações para o Google Maps, Tripadvisor ou Livro de Reclamações, esses sites podem usar os seus próprios cookies, de acordo com as respetivas políticas.</p>
-      <h2>Alterações</h2>
-      <p>Se no futuro passarmos a usar cookies não essenciais, só o faremos depois de pedir o seu consentimento, e atualizaremos esta página.</p>
-      <p>Veja também a <Link to="/privacidade">Política de Privacidade</Link>.</p>
     </LegalPage>
   );
 }

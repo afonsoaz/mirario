@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { LegalLinks } from "@/components/LegalPage";
 import fernandaLine from "../assets/dona-fernanda-line.png";
 import peixePhoto from "../assets/peixe-grelhado-toalha.jpg";
 import assadoPhoto from "../assets/assado-da-casa-toalha.jpg";
@@ -250,7 +251,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8" aria-label="Navegação principal">
-          <a href="#inicio" className="flex flex-col">
+          <a href="#inicio" className="nav-link flex flex-col">
             <span className="font-display text-3xl font-semibold text-primary md:text-4xl">Restaurante Mira Rio</span>
             <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground md:text-xs">Rebordões, Santo Tirso</span>
           </a>
@@ -261,7 +262,7 @@ function Index() {
             <a className="nav-link" href="#visitar">Visite-nos</a>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            <a className="button-primary inline-flex" href="tel:+351252853492" aria-label="Ligar para reservar mesa">
+            <a className="button-primary inline-flex min-h-11" href="tel:+351252853492" aria-label="Reservar: ligar para o restaurante">
               Reservar
             </a>
           </div>
@@ -269,6 +270,7 @@ function Index() {
       </header>
 
       <main id="inicio">
+        <span id="conteudo" className="sr-only" tabIndex={-1} />
         <section id="historia" className="relative mx-auto max-w-7xl overflow-hidden px-5 pt-12 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-4 lg:px-8 lg:min-h-[680px] lg:pt-24">
           <div className="fernanda-hero-mobile lg:hidden" aria-hidden="true">
             <img src={fernandaLine} alt="" />
@@ -303,10 +305,10 @@ function Index() {
           <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-10 px-5 md:grid-cols-4 md:px-8">
             {details.map(([label, value]) => (
               <div key={label}>
-                <p className="mb-2 text-[10px] font-semibold uppercase opacity-60">{label}</p>
+                <p className="mb-2 text-[11px] font-semibold uppercase text-primary-foreground/85">{label}</p>
                 {label === "Morada" ? (
                   <a
-                    className="whitespace-pre-line font-display text-lg italic leading-snug underline decoration-accent/60 underline-offset-4 transition-colors hover:decoration-accent"
+                    className="whitespace-pre-line font-display text-lg italic leading-snug underline decoration-accent/60 underline-offset-4 transition-colors hover:decoration-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-foreground"
                     href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes+Av.+Joao+Paulo+II+400+Santo+Tirso"
                     target="_blank"
                     rel="noreferrer"
@@ -356,12 +358,12 @@ function Index() {
                 </p>
 
                 <aside className="daily-special mt-10" aria-label="Informação sobre o prato do dia">
-                  <p className="text-[10px] font-semibold uppercase text-primary-foreground/70">De terça a sexta · ao almoço</p>
+                  <p className="text-[11px] font-semibold uppercase text-primary-foreground/90">De terça a sexta · ao almoço</p>
                   <h3 className="mt-3 font-display text-4xl italic text-primary-foreground">Prato do dia</h3>
-                  <p className="mt-3 max-w-sm text-sm leading-6 text-primary-foreground/80">
+                  <p className="mt-3 max-w-sm text-sm leading-6 text-primary-foreground/90">
                     Uma sugestão caseira diferente, escolhida diariamente pela cozinha. À segunda-feira estamos encerrados.
                   </p>
-                  <a className="mt-6 inline-flex font-semibold text-primary-foreground underline decoration-accent underline-offset-4" href="tel:+351252853492">
+                  <a className="mt-6 inline-flex min-h-11 items-center font-semibold text-primary-foreground underline decoration-accent underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-foreground" href="tel:+351252853492">
                     Ligue para saber o prato de hoje
                   </a>
                 </aside>
@@ -394,7 +396,7 @@ function Index() {
                 <h2 id="reviews-title" className="font-display text-5xl italic text-primary md:text-6xl">À mesa, sentem-se em casa</h2>
               </div>
               <div className="flex flex-wrap gap-x-10 gap-y-5">
-                <a className="rating-link" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Google Maps">
+                <a className="rating-link" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer" aria-label="Avaliação 4,3 de 5 no Google Maps, 156 avaliações (abre numa nova janela)">
                   <span className="rating-platform inline-flex items-center gap-1.5">
                     <GoogleMapsLogo className="h-3.5 w-3.5 text-[#4285F4]" />
                     Google Maps
@@ -403,7 +405,7 @@ function Index() {
                   <Stars rating={4.5} />
                   <span className="rating-count">156 avaliações</span>
                 </a>
-                <a className="rating-link" href="https://www.tripadvisor.com/Restaurant_Review-g1466996-d12700432-Reviews-Restaurante_Mira_Rio-Santo_Tirso_Porto_District_Northern_Portugal.html" target="_blank" rel="noreferrer" aria-label="Ver avaliações do Mira Rio no Tripadvisor">
+                <a className="rating-link" href="https://www.tripadvisor.com/Restaurant_Review-g1466996-d12700432-Reviews-Restaurante_Mira_Rio-Santo_Tirso_Porto_District_Northern_Portugal.html" target="_blank" rel="noreferrer" aria-label="Avaliação 4,5 de 5 no Tripadvisor, 16 avaliações (abre numa nova janela)">
                   <span className="rating-platform inline-flex items-center gap-1.5">
                     <TripadvisorLogo className="h-3.5 w-3.5 text-[#00AF87]" />
                     Tripadvisor
@@ -461,7 +463,7 @@ function Index() {
           <div>
             <p className="font-display text-4xl italic text-primary">Restaurante Mira Rio</p>
             <p className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">Av. João Paulo II, 400<br />4795 Rebordões, Santo Tirso</p>
-            <a className="mt-5 inline-block text-sm font-semibold text-primary underline decoration-accent underline-offset-4" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer">Ver no mapa</a>
+            <a className="nav-link mt-5 inline-block text-sm font-semibold text-primary underline decoration-accent underline-offset-4" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Mira+Rio+Rebordoes" target="_blank" rel="noreferrer">Ver no mapa<span className="sr-only"> (abre o Google Maps numa nova janela)</span></a>
           </div>
           <div>
             <p className="footer-label">Horário</p>
@@ -477,11 +479,11 @@ function Index() {
             <a className="button-primary mt-6" href="tel:+351252853492">Ligar agora</a>
           </div>
         </div>
-        <div className="mx-auto mt-14 flex max-w-7xl flex-col gap-2 border-t border-border pt-7 text-[10px] uppercase text-muted-foreground sm:flex-row sm:justify-between">
+        <div className="mx-auto mt-14 flex max-w-7xl flex-col gap-3 border-t border-border pt-7 text-xs uppercase text-muted-foreground sm:flex-row sm:justify-between">
           <p>© 2026 Restaurante Mira Rio</p>
-          <div className="flex flex-col gap-2 sm:items-end">
+          <div className="flex flex-col gap-3 sm:items-end">
             <p>Visa · Mastercard · Multibanco</p>
-            <a className="transition-colors hover:text-primary" href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noreferrer">Livro de Reclamações</a>
+            <LegalLinks className="sm:justify-end" />
           </div>
         </div>
       </footer>
